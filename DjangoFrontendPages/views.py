@@ -6,3 +6,6 @@ def HomePageEndpoint(request):
 
 def OtherPageEndpoint(request):
     return render(request,"OtherPage.html")
+
+def TallPageEndpoint(request):
+    return render(request,"TallPage.html")

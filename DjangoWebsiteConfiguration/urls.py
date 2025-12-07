@@ -19,10 +19,12 @@ from django.urls import path
 from django.views.generic import RedirectView
 from DjangoFrontendPages.views import HomePageEndpoint
 from DjangoFrontendPages.views import OtherPageEndpoint
+from DjangoFrontendPages.views import TallPageEndpoint
 
 urlpatterns = [
     path("", RedirectView.as_view(url="home/",permanent=False)),
     path('admin/', admin.site.urls),
     path("home/", HomePageEndpoint, name="HomePageEndpoint"),
     path("other/", OtherPageEndpoint, name="OtherPageEndpoint"),
+     path("tall/", TallPageEndpoint, name="TallPageEndpoint"),
 ]
