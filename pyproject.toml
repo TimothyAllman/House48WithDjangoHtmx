@@ -1,0 +1,18 @@
+[project]
+name = "house48withdjangohtmx"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "TimothyAllman", email = "166746823+TimothyAllman@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "django>=5.2.8",
+    "django-cotton>=2.4.0",
+    "django-extensions>=4.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
