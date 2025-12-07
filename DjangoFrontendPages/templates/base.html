@@ -11,14 +11,20 @@
     </head>
 
     <body>
+
+        <div class="flex flex-col min-h-screen">
         <c-NavBar/>
 
-        <div class="p-6">
+        <div class="p-6 flex-1">
             {% block content %}
             {% endblock %}
+
+         
         </div>
 
         <c-FooterBar/>
+        
+        </div>  
     </body>
 
 </html>
