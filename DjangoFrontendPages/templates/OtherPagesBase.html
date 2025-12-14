@@ -1,0 +1,24 @@
+{% extends 'Base.html' %}
+
+{% block title %} Other {% endblock %}
+
+{% block content %}
+
+<div class="grid grid-cols-1 lg:grid-cols-[200px_1fr]">
+  
+    <!-- Sidebar -->
+    <div class="lg:col-span-1 text-white hidden lg:block">
+      <c-Sidebar/>
+    </div>
+  
+    <!-- Main Content Area -->
+    <div>
+        {% block centre_content_area %}
+        {% endblock %}
+    </div>
+
+</div>
+
+
+
+{% endblock %}
