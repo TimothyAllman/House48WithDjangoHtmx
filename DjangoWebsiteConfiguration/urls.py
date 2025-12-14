@@ -26,6 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("home/", HomePageEndpoint, name="HomePageEndpoint"),
     path("other/", OtherPagesEndpoint, name="OtherPagesEndpoint"),
-     path("otherList/", OtherListPageEndpoint, name="OtherListPageEndpoint"),
-     path("tall/", TallPageEndpoint, name="TallPageEndpoint"),
+    path("otherList/", OtherListPageEndpoint, name="OtherListPageEndpoint"),
+    path("tall/", TallPageEndpoint, name="TallPageEndpoint"),
 ]
