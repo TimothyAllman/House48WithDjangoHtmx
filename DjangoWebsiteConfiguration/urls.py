@@ -16,15 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.views.generic import RedirectView
-from DjangoFrontendPages.views import HomePageEndpoint
-from DjangoFrontendPages.views import OtherPageEndpoint
+
+from DjangoFrontendPages.views import HomePageEndpoint, NoPageEndpoint, OtherPagesEndpoint
+from DjangoFrontendPages.views import OtherListPageEndpoint
 from DjangoFrontendPages.views import TallPageEndpoint
 
 urlpatterns = [
-    path("", RedirectView.as_view(url="home/",permanent=False)),
+    path("", NoPageEndpoint, name="NoPageEndpoint"),
     path('admin/', admin.site.urls),
     path("home/", HomePageEndpoint, name="HomePageEndpoint"),
-    path("other/", OtherPageEndpoint, name="OtherPageEndpoint"),
+    path("other/", OtherPagesEndpoint, name="OtherPagesEndpoint"),
+     path("otherList/", OtherListPageEndpoint, name="OtherListPageEndpoint"),
      path("tall/", TallPageEndpoint, name="TallPageEndpoint"),
 ]
