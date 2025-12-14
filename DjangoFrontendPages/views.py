@@ -3,16 +3,23 @@ from django.views.generic import RedirectView
 
 # Create your views here.
 def NoPageEndpoint(request):
-    return RedirectView.as_view(url="home/", permanent=False)
+    return HomePageEndpoint(request)
+
 
 def HomePageEndpoint(request):
     return render(request,"HomePage.html")
 
 def OtherPagesEndpoint(request):
-    return RedirectView.as_view(url="otherList/", permanent=False)
+    return OtherListPageEndpoint(request)
 
 def OtherListPageEndpoint(request):
     return render(request,"OtherListPage.html")
+
+def OtherDetailsPageEndpoint(request):
+    return render(request,"OtherDetailsPage.html")
+
+def OtherAddPageEndpoint(request):
+    return render(request,"OtherAddPage.html")
 
 def TallPageEndpoint(request):
     return render(request,"TallPage.html")

@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from DjangoFrontendPages.views import HomePageEndpoint, NoPageEndpoint, OtherPagesEndpoint
+from DjangoFrontendPages.views import HomePageEndpoint, NoPageEndpoint, OtherAddPageEndpoint, OtherDetailsPageEndpoint, OtherPagesEndpoint
 from DjangoFrontendPages.views import OtherListPageEndpoint
 from DjangoFrontendPages.views import TallPageEndpoint
 
@@ -27,5 +27,7 @@ urlpatterns = [
     path("home/", HomePageEndpoint, name="HomePageEndpoint"),
     path("other/", OtherPagesEndpoint, name="OtherPagesEndpoint"),
     path("otherList/", OtherListPageEndpoint, name="OtherListPageEndpoint"),
+    path("otherDetails/", OtherDetailsPageEndpoint, name="OtherDetailsPageEndpoint"),
+    path("otherAdd/", OtherAddPageEndpoint, name="OtherAddPageEndpoint"),
     path("tall/", TallPageEndpoint, name="TallPageEndpoint"),
 ]
