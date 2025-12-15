@@ -1,29 +1,20 @@
 {% extends "OtherBasePage.html" %}
 
 {% block centre_content_area %}
-    <button
-        class="border"
-        data-on:click="@get('/NewOutputEndpoint')"
-    >
+
+    <button class="border" data-on:click="@get('/NewOutputEndpoint')">
         press me
     </button>
 
 
-    <div
-        id="outputArea"
-    >
+    <div id="outputArea">
         placeholder text
     </div>
 
 
-    <div
-    id="CountArea"
-    >   
+    <div id="CountArea">
         4
     </div>
 
 
-
-
-
-{% endblock %}
+{% endblock centre_content_area %}

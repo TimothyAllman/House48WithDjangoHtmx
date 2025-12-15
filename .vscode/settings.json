@@ -1,0 +1,7 @@
+{
+    "[django-html][html]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "monosans.djlint"
+    },
+
+}

@@ -1,23 +1,25 @@
-{% extends 'BasePage.html' %}
+{% extends "BasePage.html" %}
 
-{% block title %} Tall {% endblock %}
+{% block title %}
+  Tall
+{% endblock title %}
 
 {% block content %}
 
-<div class="grid grid-cols-1 lg:grid-cols-[200px_1fr]">
-  
+  <div class="grid grid-cols-1 lg:grid-cols-[200px_1fr]">
+
     <!-- Sidebar -->
     <div class="lg:col-span-1 text-white hidden lg:block">
-      <c-Sidebar/>
-    </div>
-  
-    <!-- Main Content Area -->
-    <div>
-        {% block centre_content_area %}
-        {% endblock %}
+      <c-Sidebar />
     </div>
 
-</div>
+    <!-- Main Content Area -->
+    <div>
+      {% block centre_content_area %}
+      {% endblock centre_content_area %}
+    </div>
+
+  </div>
 
 
 
