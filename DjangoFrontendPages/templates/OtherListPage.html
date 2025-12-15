@@ -1,5 +1,13 @@
-{% extends "OtherPagesBase.html" %}
+{% extends "OtherBasePage.html" %}
 
 {% block centre_content_area %}
-    <p>This is the specific content for the child page, nested inside the 'content' block defined in the intermediate template.</p>
+    
+<c-PropertyForSaleCard/>
+
+{% comment %} <c-PropertyForSaleCard/>
+
+<c-PropertyForSaleCard/>
+
+<c-PropertyForSaleCard/> {% endcomment %}
+
 {% endblock %}
