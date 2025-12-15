@@ -1,5 +1,28 @@
 {% extends "OtherBasePage.html" %}
 
 {% block centre_content_area %}
-    <p> add </p>
+    <button
+        data-on:click="@get('/NewOutput')"
+    >
+        press me
+    </button>
+
+
+    <div
+        id="outputArea"
+    >
+        placeholder text
+    </div>
+
+    
+    <div
+    id="CountArea"
+    >   
+        4
+    </div>
+
+
+
+
+
 {% endblock %}

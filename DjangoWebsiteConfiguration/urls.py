@@ -16,18 +16,25 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import RedirectView
+from django.urls import reverse_lazy
 
-from DjangoFrontendPages.views import HomePageEndpoint, NoPageEndpoint, OtherAddPageEndpoint, OtherDetailsPageEndpoint, OtherPagesEndpoint
+from DjangoFrontendPages.views import HomePageEndpoint, OtherAddPageEndpoint, OtherDetailsPageEndpoint
 from DjangoFrontendPages.views import OtherListPageEndpoint
 from DjangoFrontendPages.views import TallPageEndpoint
 
 urlpatterns = [
-    path("", NoPageEndpoint, name="NoPageEndpoint"),
     path('admin/', admin.site.urls),
+
+    # pages
+    path("", RedirectView.as_view(pattern_name="HomePageEndpoint", permanent=False), name="NoPageEndpoint"),
     path("home/", HomePageEndpoint, name="HomePageEndpoint"),
-    path("other/", OtherPagesEndpoint, name="OtherPagesEndpoint"),
-    path("otherList/", OtherListPageEndpoint, name="OtherListPageEndpoint"),
-    path("otherDetails/", OtherDetailsPageEndpoint, name="OtherDetailsPageEndpoint"),
-    path("otherAdd/", OtherAddPageEndpoint, name="OtherAddPageEndpoint"),
+    path("other/",  RedirectView.as_view(pattern_name="OtherListPageEndpoint", permanent=False), name="OtherPagesEndpoint"),
+    path("other/List/", OtherListPageEndpoint, name="OtherListPageEndpoint"),
+    path("other/Details/", OtherDetailsPageEndpoint, name="OtherDetailsPageEndpoint"),
+    path("other/Add/", OtherAddPageEndpoint, name="OtherAddPageEndpoint"),
     path("tall/", TallPageEndpoint, name="TallPageEndpoint"),
+
+    # api
+    path("NewOutput/", NewOutputEndpoint),
 ]
