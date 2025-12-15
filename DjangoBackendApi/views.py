@@ -14,7 +14,7 @@ def NewOutputEndpoint(request):
             render_to_string('NewOutput.html')
         ),
         SSE.patch_elements(
-            render_to_string('NewCount.html', context=dict(count=item_count))
+            render_to_string('NewCount.html', context=dict(item_count=item_count))
         ),
     ])
 

@@ -19,6 +19,7 @@ from django.urls import path
 from django.views.generic import RedirectView
 from django.urls import reverse_lazy
 
+from DjangoBackendApi.views import NewOutputEndpoint
 from DjangoFrontendPages.views import HomePageEndpoint, OtherAddPageEndpoint, OtherDetailsPageEndpoint
 from DjangoFrontendPages.views import OtherListPageEndpoint
 from DjangoFrontendPages.views import TallPageEndpoint
