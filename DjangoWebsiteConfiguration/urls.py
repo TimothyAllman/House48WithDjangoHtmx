@@ -20,6 +20,7 @@ from django.views.generic import RedirectView
 from django.urls import reverse_lazy
 
 from DjangoBackendApi.views import NewOutputEndpoint
+from DjangoFrontendPages.api import LiveDataFeedEndpoint
 from DjangoFrontendPages.views import HomePageEndpoint, OtherAddPageEndpoint, OtherDetailsPageEndpoint
 from DjangoFrontendPages.views import OtherListPageEndpoint
 from DjangoFrontendPages.views import TallPageEndpoint
@@ -36,6 +37,7 @@ urlpatterns = [
     path("other/Add/", OtherAddPageEndpoint, name="OtherAddPageEndpoint"),
     path("tall/", TallPageEndpoint, name="TallPageEndpoint"),
 
-    # api
-    path("NewOutput/", NewOutputEndpoint),
+    # frontend api
+    path("NewOutputEndpoint/", NewOutputEndpoint),
+    path("LiveDataFeedEndpoint/", LiveDataFeedEndpoint),
 ]
