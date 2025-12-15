@@ -13,9 +13,10 @@ def LiveDataFeedEndpoint(request):
 
     for i in range(1,12):
         current_time = time.strftime('%H:%M:%S')
+        
+        contextDict = dict(timeNow=current_time)
         # Format the data as a Datastar fragment event
-        myhtml= f"""
-        <div id="time">Current Time: {current_time}</div>\n
-        """
+        myhtml = render_to_string('TimeSection.html',context=contextDict,)
+
         yield SSE.patch_elements(myhtml)
         time.sleep(1)
